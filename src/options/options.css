@@ -1,0 +1,209 @@
+:root {
+  color-scheme: light dark;
+  font: 14px system-ui, sans-serif;
+  --border: color-mix(in srgb, currentColor 20%, transparent);
+  --hover: color-mix(in srgb, currentColor 8%, transparent);
+  --selected: color-mix(in srgb, currentColor 16%, transparent);
+}
+body {
+  margin: 0;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 100vh;
+}
+aside {
+  border-right: 1px solid var(--border);
+  padding: 12px;
+}
+main {
+  padding: 16px 24px;
+  max-width: 900px;
+}
+.brand {
+  margin: 0 0 16px;
+  padding: 0 6px;
+}
+.brand h1 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+.brand small {
+  display: block;
+  font-size: 11px;
+  opacity: 0.65;
+  margin-top: 2px;
+}
+#profiles {
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+}
+#profiles li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#profiles li:hover {
+  background: var(--hover);
+}
+#profiles li.selected {
+  background: var(--selected);
+}
+#profiles .name {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#profiles .active-tag {
+  font-size: 11px;
+  opacity: 0.7;
+}
+.swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+  flex: none;
+}
+.icon-btn {
+  padding: 0 6px;
+  line-height: 1.4;
+}
+.toolbar {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.field {
+  margin-bottom: 14px;
+}
+.field > label,
+h2 {
+  display: block;
+  font-weight: 600;
+  margin: 0 0 4px;
+  font-size: 13px;
+}
+.row-inline {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+input[type='text'],
+textarea,
+select {
+  font: inherit;
+  padding: 4px 6px;
+  box-sizing: border-box;
+}
+input[type='text'].wide,
+textarea {
+  width: 100%;
+}
+textarea {
+  min-height: 90px;
+  font-family: ui-monospace, monospace;
+}
+.invalid {
+  outline: 2px solid #c53030;
+}
+.err {
+  color: #c53030;
+  font-size: 12px;
+  margin-top: 2px;
+  min-height: 0;
+}
+.hint {
+  font-size: 12px;
+  opacity: 0.75;
+  margin-top: 2px;
+}
+.notes {
+  margin-top: 32px;
+}
+.notes ul {
+  margin: 0;
+  padding-left: 18px;
+}
+.notes li + li {
+  margin-top: 4px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th {
+  text-align: left;
+  font-size: 12px;
+  padding: 2px 4px;
+  opacity: 0.8;
+}
+td {
+  padding: 2px 4px;
+  vertical-align: top;
+}
+td input[type='text'] {
+  width: 100%;
+}
+td.narrow {
+  width: 1%;
+  white-space: nowrap;
+}
+tr.dup td input.name-input {
+  outline: 2px solid #d69e2e;
+}
+.banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+}
+.banner.warn {
+  background: #fff3cd;
+  color: #5c4400;
+}
+.banner.error {
+  background: #fde8e8;
+  color: #7b1d1d;
+}
+.preview {
+  font-family: ui-monospace, monospace;
+  font-size: 12px;
+  padding: 6px 8px;
+  border: 1px dashed var(--border);
+  border-radius: 4px;
+  margin-top: 6px;
+}
+.warning-text {
+  color: #b7791f;
+  font-size: 12px;
+  margin-top: 4px;
+}
+.empty {
+  opacity: 0.7;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* Faint pup illustration in the bottom-left corner (sidebar width), behind all content. */
+body::before {
+  content: '';
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 300px; /* aside column plus its padding */
+  aspect-ratio: 1181 / 1332;
+  background: url('pup-p.png') no-repeat left bottom / contain;
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: -1;
+}

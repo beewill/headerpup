@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "HeaderPup",
+  "version": "0.1.5",
+  "description": "Quickly switch between request-header profiles.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "headerpup@flussen.net",
+      "strict_min_version": "128.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png",
+    "128": "icons/icon-128.png"
+  },
+  "permissions": ["declarativeNetRequest", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "optional_permissions": ["<all_urls>"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "action": {
+    "default_title": "HeaderPup: Off",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png"
+    }
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "commands": {
+    "cycle-profile": {
+      "suggested_key": {
+        "default": "Alt+Shift+H"
+      },
+      "description": "Cycle through header profiles (Off → P1 → … → Off)"
+    }
+  }
+}

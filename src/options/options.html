@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>HeaderPup Options</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <div id="banners">
+      <div id="permission" class="banner warn" hidden>
+        <span>HeaderPup needs access to all sites to modify request headers.</span>
+        <button id="grant" type="button">Grant access</button>
+        <small id="permission-detail"></small>
+      </div>
+      <div id="dnr-error" class="banner error" hidden></div>
+    </div>
+    <div class="layout">
+      <aside>
+        <header class="brand">
+          <h1>HeaderPup</h1>
+          <small id="version"></small>
+        </header>
+        <ul id="profiles" aria-label="Profiles"></ul>
+        <button id="add-profile" type="button">+ New profile</button>
+      </aside>
+      <main id="editor"></main>
+    </div>
+    <script src="options.js"></script>
+  </body>
+</html>

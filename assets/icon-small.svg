@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 128 128"
+   width="128"
+   height="128"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="icon-small.svg"
+   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs5" />
+  <sodipodi:namedview
+     id="namedview5"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.90114683"
+     inkscape:cx="-89.330615"
+     inkscape:cy="-127.06032"
+     inkscape:window-width="2743"
+     inkscape:window-height="1514"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5" />
+  <!-- muzzle -->
+  <!-- eyes -->
+  <!-- nose -->
+  <!-- mouth -->
+  <path
+     d="m 4.0433129,37.009134 c 0,-35.9878368 119.9133771,-35.9878368 119.9133771,0 0,44.984791 -44.96752,80.972606 -59.956696,80.972606 -14.98917,0 -59.9566802,-35.987815 -59.9566811,-80.972606 z"
+     fill="#3b2a66"
+     id="path4"
+     style="fill:#6f6f91;fill-opacity:1" />
+</svg>
