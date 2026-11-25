@@ -1,8 +1,8 @@
 # HeaderPup
 
-Browser extension for quickly switching between request-header profiles.
-Available for Firefox (`gecko/`) and Chrome/Chromium (`webkit/`), sharing one
-codebase in `src/`.
+Browser extension for quickly switching between request-header profiles, i.e. blue/green testing.
+
+Available for Firefox (`gecko/`) and Chrome/Chromium (`webkit/`)
 
 ## Layout
 
@@ -31,8 +31,3 @@ webkit/         Chrome:  manifest.json, browser-shim.ts (browser -> chrome alias
 To install the Chrome build manually: open `chrome://extensions`, enable
 Developer mode, and choose "Load unpacked" on `webkit/dist`.
 
-## Browser differences
-
-- **Background:** Firefox uses an event page (`background.scripts`); Chrome uses a service worker.
-- **Permissions:** Firefox declares `<all_urls>` as an optional permission as well; Chrome grants it at install, so its manifest omits `optional_permissions`.
-- **Badge text color:** `action.setBadgeTextColor` is Firefox-only and is skipped on Chrome.
